@@ -123,6 +123,17 @@ function changeHC(hovColor){
 }
 </script>
 
+<!-- Input Text -->
+
+    <label class="labels" for="inputText">Input Text: </label><input id="inputText" onkeyup="getVal2()" type="text" name="filter_name" value="Nom" onclick="this.value = &#39;&#39;;" onkeydown="this.style.color = &#39;#000000&#39; " style="width:180px;" >
+
+<script type="text/javascript">
+function getVal2() {
+    var x = document.getElementById("inputText");
+    document.getElementById("email").placeholder = x.value;
+}
+</script>
+
 <!-- Intro Text -->
 
     <label class="labels" for="fname">Intro Text: </label><input id="fname" onkeyup="getVal()" type="text" name="filter_name" value="Nom" onclick="this.value = &#39;&#39;;" onkeydown="this.style.color = &#39;#000000&#39; " style="width:180px;" >
