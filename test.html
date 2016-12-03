@@ -15,12 +15,12 @@
 <!-- Adding A Youtube Video -->
 
 <div class="container">
-<div class="row">
-<div class="col-xs-12 col-sm-9">
-<div class="options">
-<label class="labels" for="link">Youtube Link: </label><input class="inputs" type="text" name="link" size="20" id="link" placeholder="link" />
-<button class="buttons" type="button" onclick="createYouTubeEmbedLink (link)" >Submit</button>
-</div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-9">
+    <div class="options">
+      <label class="labels" for="link">Youtube Link: </label><input class="inputs" type="text" name="link" size="20" id="link" placeholder="link" />
+      <button class="buttons" type="button" onclick="createYouTubeEmbedLink (link)" >Submit</button>
+    </div>
 
 <script language="javascript" type="text/javascript">
 function createYouTubeEmbedLink (link) {
@@ -32,28 +32,28 @@ function createYouTubeEmbedLink (link) {
 </script>
 
 <!-- HTML Stacking Form And Video -->
-  <div class="outer">
-    <div class="inner">
-      <iframe id="iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+    <div class="outer">
+      <div class="inner">
+        <iframe id="iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div id="dissapear" class="inner">
+        <form id="form" method="post" name="installer" onsubmit="showHide(); return false;">
+          <input id="email" type="email" name="email" required placeholder="Email Address" />
+          <input id="submit" type="submit" value="Submit" name="submit" onmouseover="changeHC(hovColor)" onmouseout="changeButtonColor(buttonColor)" />
+        </form>
+        <div id="skipEmail" type="button" onClick="javascript:showHide()">Skip Entering Email</div>
+        <div id="icard" class="drag">  item</div>
+      </div>
     </div>
-    <div id="dissapear" class="inner">
-      <form id="form" method="post" name="installer" onsubmit="showHide(); return false;">
-        <input id="email" type="email" name="email" required placeholder="Email Address" />
-        <input id="submit" type="submit" value="Submit" name="submit" onmouseover="changeHC(hovColor)" onmouseout="changeButtonColor(buttonColor)" />
-      </form>
-      <div id="skipEmail" type="button" onClick="javascript:showHide()">Skip Entering Email</div>
-      <div id="icard" class="drag">  item</div>
     </div>
-  </div>
-</div>
 
 <!-- Changing Background Form Color -->
 
-<div class="col-xs-12 col-sm-3">
-<div class="options">
-<label class="labels" for="color">Background Color: </label><input class="inputs" type="text" name="color" size="20" id="color" placeholder="rgba(red,green,blue,opacity)" />
-<button class="buttons" type="button" onClick="javascript:changeBGC(color)">Submit</button>
-</div>
+    <div class="col-xs-12 col-sm-3">
+    <div class="options">
+      <label class="labels" for="color">Background Color: </label><input class="inputs" type="text" name="color" size="20" id="color" placeholder="rgba(red,green,blue,opacity)" />
+      <button class="buttons" type="button" onClick="javascript:changeBGC(color)">Submit</button>
+    </div>
 
 <script type="text/javascript">
 function changeBGC(color){
@@ -65,10 +65,10 @@ function changeBGC(color){
 
 <!-- Changing Button Color -->
 
-<div class="options">
-<label class="labels" for="buttonColor">Button Color: </label><input class="inputs" type="text" name="buttonColor" size="20" id="buttonColor" placeholder="rgb(red,green,blue)" />
-<button class="buttons" type="button" onClick="javascript:changeButtonColor(buttonColor)">Submit</button>
-</div>
+    <div class="options">
+      <label class="labels" for="buttonColor">Button Color: </label><input class="inputs" type="text" name="buttonColor" size="20" id="buttonColor" placeholder="rgb(red,green,blue)" />
+      <button class="buttons" type="button" onClick="javascript:changeButtonColor(buttonColor)">Submit</button>
+    </div>
 
 <script type="text/javascript">
 function changeButtonColor(buttonColor){
@@ -80,11 +80,11 @@ function changeButtonColor(buttonColor){
 
 <!-- Changing Button Font -->
 
-<div class="options">
-<p>Font:</p>
-<label class="labels" for="fontSize">Size: </label><input class="inputs" type="text" name="fontSize" size="20" id="fontSize" placeholder="px" />
-<button class="buttons" type="button" onClick="javascript:changeButtonFont(fontSize)">Submit</button>
-</div>
+    <div class="options">
+      <p>Font:</p>
+      <label class="labels" for="fontSize">Size: </label><input class="inputs" type="text" name="fontSize" size="20" id="fontSize" placeholder="px" />
+      <button class="buttons" type="button" onClick="javascript:changeButtonFont(fontSize)">Submit</button>
+    </div>
 
 <script type="text/javascript">
 function changeButtonFont(fontSize){
@@ -108,10 +108,10 @@ function changeButtonFont(fontSize){
 
 <!-- Changing Button Hover Color -->
 
-<div class="options">
-<label class="labels" for="hovColor">Button Hover Color: </label><input class="inputs" type="text" name="hovColor" size="20" id="hovColor" placeholder="rgb(red,green,blue)" />
-<button class="buttons" type="button" >Submit</button>
-</div>
+    <div class="options">
+      <label class="labels" for="hovColor">Button Hover Color: </label><input class="inputs" type="text" name="hovColor" size="20" id="hovColor" placeholder="rgb(red,green,blue)" />
+      <button class="buttons" type="button" >Submit</button>
+    </div>
 
 <script type="text/javascript">
 function changeHC(hovColor){
@@ -123,7 +123,7 @@ function changeHC(hovColor){
 
 <!-- Intro Text -->
 
-<label class="labels" for="fname">Intro Text: </label><input id="fname" onkeyup="getVal()" type="text" name="filter_name" value="Nom" onclick="this.value = &#39;&#39;;" onkeydown="this.style.color = &#39;#000000&#39; " style="width:180px;" >
+    <label class="labels" for="fname">Intro Text: </label><input id="fname" onkeyup="getVal()" type="text" name="filter_name" value="Nom" onclick="this.value = &#39;&#39;;" onkeydown="this.style.color = &#39;#000000&#39; " style="width:180px;" >
 
 <script type="text/javascript">
 function getVal() {
@@ -146,8 +146,8 @@ function showHide() {
 }
 </script>
 
-</div>
-</div>
+    </div>
+  </div>
 </div>
   </body>
 </html>
