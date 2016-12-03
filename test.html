@@ -32,17 +32,19 @@ function createYouTubeEmbedLink (link) {
 </script>
 
 <!-- HTML Stacking Form And Video -->
+
     <div class="outer">
       <div class="inner">
         <iframe id="iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
       </div>
       <div id="dissapear" class="inner">
+        <div id="icard" class="drag">  item</div>
         <form id="form" method="post" name="installer" onsubmit="showHide(); return false;">
           <input id="email" type="email" name="email" required placeholder="Email Address" />
           <input id="submit" type="submit" value="Submit" name="submit" onmouseover="changeHC(hovColor)" onmouseout="changeButtonColor(buttonColor)" />
         </form>
         <div id="skipEmail" type="button" onClick="javascript:showHide()">Skip Entering Email</div>
-        <div id="icard" class="drag">  item</div>
+        
       </div>
     </div>
     </div>
@@ -129,6 +131,22 @@ function changeHC(hovColor){
 function getVal() {
     var x = document.getElementById("fname");
     document.getElementById("icard").innerHTML = x.value.toUpperCase();
+}
+</script>
+
+<!-- Hide Skip Form On Click -->
+
+    <label class="labels" for="skipBox">Hide Skip Form Option: </label><input class="inputs" type="checkbox" name="skipBox" size="20" id="skipBox" onClick="javascript:showHideSkip()" />
+
+<script type="text/javascript">
+function showHideSkip() {
+  var div = document.getElementById("skipEmail");
+  if (div.style.display == 'none') {
+    div.style.display = '';
+  }
+  else {
+    div.style.display = 'none';
+  }
 }
 </script>
 
