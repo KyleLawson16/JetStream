@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+  color:#000000;
+  background-color:#FFFFFF;
+  background-image:url('Background Image');
+  background-repeat:no-repeat;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a  {
+  color:#0000FF;
+}
+
+a:visited {
+  color:#800080;
+}
+    
+a:hover {
+  color:#008000;
+}
+    
+a:active {
+  color:#FF0000;
+}
+	
+.outer {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.inner {
+  position: absolute;
+}
+
+#form {
+  width: 560px;
+  height: 315px;
+  z-index: 2;
+}
+
+#form input {
+  margin-top: 25%;
+}
+
+#email {
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: solid 1px #ffffff;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+#email:hover {
+  border: solid 1px #ffffff;
+}
+
+#email:focus {
+  border: solid 1px #ffffff;
+}
+
+#submit {
+  width: 120px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+#submit:hover {
+  background-color: ;
+}
+	
+.options {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.labels {
+  font-size: 16px;
+  width: 500px;
+}
+
+.inputs {
+  width: 60%;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.buttons {
+  width: 30%;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  background-color: #ff0000;
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+.buttons:hover {
+  background-color: #ff9999;
+}
+
+#icard {
+	text-align: center;
+	font-size: 16px;
+	margin-top: -120px;
+	color: #ffffff;
+}
+
+#skipEmail {
+	background-color: transparent;
+	border: none;
+	margin-top: -120px;
+	color: #ffffff;
+}
+
+#skipEmail:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
