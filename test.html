@@ -25,9 +25,17 @@
 <script language="javascript" type="text/javascript">
 function createYouTubeEmbedLink (link) {
   link = document.getElementById('link').value;
-  var number = link.substring(32);
-  var embed = "https://www.youtube.com/embed/" + number;
-  document.getElementById('iframe').src = embed;
+  if (link.charAt(12) == 'y') {
+	  var number = link.substring(32);
+  	  var embed = "https://www.youtube.com/embed/" + number;
+  	  document.getElementById('iframe').src = embed;
+  }
+  else if (link.charAt(12) == 'o') {
+	  var number = link.substring(18);
+	  var embed = "https://player.vimeo.com/video/" + number;
+	  document.getElementById('iframe').src = embed;
+  }
+  else {}
 }
 </script>
 
@@ -38,13 +46,12 @@ function createYouTubeEmbedLink (link) {
         <iframe id="iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
       </div>
       <div id="dissapear" class="inner">
-        <div id="icard" class="drag">  item</div>
         <form id="form" method="post" name="installer" onsubmit="showHide(); return false;">
+          <div id="icard" class="drag">Please enter your email in order to watch video.</div>
           <input id="email" type="email" name="email" required placeholder="Email Address" />
           <input id="submit" type="submit" value="Submit" name="submit" onmouseover="changeHC(hovColor)" onmouseout="changeButtonColor(buttonColor)" />
+          <div id="skipEmail" type="button" onClick="javascript:showHide()">Skip Entering Email</div>
         </form>
-        <div id="skipEmail" type="button" onClick="javascript:showHide()">Skip Entering Email</div>
-        
       </div>
     </div>
     </div>
