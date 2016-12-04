@@ -80,7 +80,18 @@ function changeButtonColor(buttonColor){
 }
 </script>
 
-<!-- Changing Button Font -->
+<!-- Changing Button Text -->
+
+    <label class="labels" for="buttonText">Button Text: </label><input id="buttonText" onkeyup="changeButtonText()" type="text" name="filter_name" value="Nom" onclick="this.value = &#39;&#39;;" onkeydown="this.style.color = &#39;#000000&#39; " style="width:180px;" >
+
+<script type="text/javascript">
+function changeButtonText() {
+    var x = document.getElementById("buttonText");
+    document.getElementById("submit").value = x.value;
+}
+</script>
+
+<!-- Changing Button Font 
 
     <div class="options">
       <p>Font:</p>
@@ -108,7 +119,9 @@ function changeButtonFont(fontSize){
 }
 </script>
 
-<!-- Changing Button Hover Color -->
+-->
+
+<!-- Changing Button Hover Color 
 
     <div class="options">
       <label class="labels" for="hovColor">Button Hover Color: </label><input class="inputs" type="text" name="hovColor" size="20" id="hovColor" placeholder="rgb(red,green,blue)" />
@@ -122,6 +135,8 @@ function changeHC(hovColor){
   div.style.backgroundColor = hovColor;
 }
 </script>
+
+-->
 
 <!-- Input Text -->
 
@@ -141,7 +156,7 @@ function getVal2() {
 <script type="text/javascript">
 function getVal() {
     var x = document.getElementById("fname");
-    document.getElementById("icard").innerHTML = x.value.toUpperCase();
+    document.getElementById("icard").innerHTML = x.value;
 }
 </script>
 
