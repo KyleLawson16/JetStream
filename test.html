@@ -9,6 +9,8 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="CSS/custom.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="JS/spectrum.js"></script>
+    <link rel="stylesheet" href="CSS/spectrum.css" />
   </head>
   <body>
 
@@ -60,7 +62,21 @@ function createYouTubeEmbedLink (link) {
 
     <div class="col-xs-12 col-sm-3">
     <div class="options">
-      <label class="labels" for="color">Background Color: </label><input class="inputs" type="text" name="color" size="20" id="color" placeholder="rgba(red,green,blue,opacity)" />
+      <label class="labels" for="color">Background Color: </label>
+      <input type='text' class="basic"/>
+      <em id='basic-log'></em>
+
+<script>
+$(".basic").spectrum({
+    color: "#f00",
+    change: function(color) {
+        $("#form").css('backgroundColor', color.toHexString());
+    }
+});
+
+</script>   
+      
+      <!--<input class="inputs" type="text" name="color" size="20" id="color" placeholder="rgba(red,green,blue,opacity)" />
       <button class="buttons" type="button" onClick="javascript:changeBGC(color)">Submit</button>
     </div>
 
@@ -74,6 +90,22 @@ function changeBGC(color){
 
 <!-- Changing Button Color -->
 
+      <label class="labels" for="color">Button Color: </label>
+      <input type='text' class="basicbutton"/>
+      <em id='basic-log'></em>
+
+<script>
+$(".basicbutton").spectrum({
+    color: "#f00",
+    change: function(color) {
+        $("#submit").css('backgroundColor', color.toHexString());
+    }
+});
+
+</script> 
+
+<!--
+
     <div class="options">
       <label class="labels" for="buttonColor">Button Color: </label><input class="inputs" type="text" name="buttonColor" size="20" id="buttonColor" placeholder="rgb(red,green,blue)" />
       <button class="buttons" type="button" onClick="javascript:changeButtonColor(buttonColor)">Submit</button>
@@ -85,7 +117,7 @@ function changeButtonColor(buttonColor){
   buttonColor = document.getElementById('buttonColor').value;
   div.style.backgroundColor = buttonColor;
 }
-</script>
+</script>-->
 
 <!-- Changing Button Text -->
 
