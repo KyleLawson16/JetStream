@@ -63,15 +63,32 @@ function createYouTubeEmbedLink (link) {
     <div class="col-xs-12 col-sm-3">
     <div class="options">
       <label class="labels" for="color">Background Color: </label>
-      <input type='text' class="basic"/>
-      <em id='basic-log'></em>
+      <input type='text' class='startEmpty' id="showInputWithClear" value='' />
 
 <script>
-$(".basic").spectrum({
-    color: "#f00",
-    change: function(color) {
-        $("#form").css('backgroundColor', color.toHexString());
-    }
+var initialColor = "#f00";
+$("#form").css("backgroundColor", initialColor);
+
+function updateColor(element, color) {
+    $(element).css("backgroundColor", 
+                   (color ? color.toHslString() : ""));
+}
+ 
+$(".startEmpty").spectrum({
+    allowEmpty: true,
+});
+$("#showInputWithClear").spectrum({
+    showInput: true,
+    allowEmpty:true,
+	showAlpha: true,
+	showPalette: true,
+    palette: [
+        ['black', 'white', 'blanchedalmond'],
+        ['rgb(255, 128, 0);', 'hsv 100 70 50', 'lightyellow']
+    ],
+	color: initialColor,
+    move: function (color) { updateColor("#form", color); },
+    hide: function (color) { updateColor("#form", color); }
 });
 
 </script>   
@@ -91,15 +108,29 @@ function changeBGC(color){
 <!-- Changing Button Color -->
 
       <label class="labels" for="color">Button Color: </label>
-      <input type='text' class="basicbutton"/>
-      <em id='basic-log'></em>
+      <input type='text' class='startEmpty' id="showInputWithClearButton" value='' />
 
 <script>
-$(".basicbutton").spectrum({
-    color: "#f00",
-    change: function(color) {
-        $("#submit").css('backgroundColor', color.toHexString());
-    }
+var initialColor = "#f00";
+$("#submit").css("backgroundColor", initialColor);
+
+function updateButtonColor(element, color) {
+    $(element).css("backgroundColor", 
+                   (color ? color.toHslString() : ""));
+}
+ 
+$("#showInputWithClearButton").spectrum({
+    showInput: true,
+    allowEmpty:true,
+	showPalette: true,
+	showAlpha: true,
+    palette: [
+        ['black', 'white', 'blanchedalmond'],
+        ['rgb(255, 128, 0);', 'hsv 100 70 50', 'lightyellow']
+    ],
+	color: initialColor,
+    move: function (color) { updateButtonColor("#submit", color); },
+    hide: function (color) { updateButtonColor("#submit", color); }
 });
 
 </script> 
