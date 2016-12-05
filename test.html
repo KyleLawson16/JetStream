@@ -10,9 +10,22 @@
     <link rel="stylesheet" href="CSS/custom.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="JS/spectrum.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
     <link rel="stylesheet" href="CSS/spectrum.css" />
   </head>
-  <body>
+  <body onLoad="positionForm()">
+  
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAr-D6dE6-UxyexCvefx5SbnCLmXWSU0Ek",
+    authDomain: "vidvision-ee78f.firebaseapp.com",
+    databaseURL: "https://vidvision-ee78f.firebaseio.com",
+    storageBucket: "vidvision-ee78f.appspot.com",
+    messagingSenderId: "603201928558"
+  };
+  firebase.initializeApp(config);
+</script>
 
 <!-- Adding A Youtube Video -->
 
@@ -45,7 +58,7 @@ function createYouTubeEmbedLink (link) {
 
     <div class="outer">
       <div class="inner">
-        <iframe id="iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+        <iframe id="iframe" src="" frameborder="0" allowfullscreen></iframe>
       </div>
       <div id="dissapear" class="inner">
         <form id="form" method="post" name="installer" onsubmit="showHide(); return false;">
@@ -57,6 +70,20 @@ function createYouTubeEmbedLink (link) {
       </div>
     </div>
     </div>
+    
+<!--<script type="text/javascript">
+function positionForm() {
+    var iframe = document.getElementById("iframe");
+	var icard = document.getElementById("icard");
+	var height = iframe.style.height;
+	//height = height.toString();
+	//var heightNumber = height.substring(0, height.length-2);
+	//var margin = (heightNumber - 50) / 2;
+	//margin += "px";
+	window.alert(height);
+	//icard.style.paddingTop = margin;
+}
+</script>-->
 
 <!-- Changing Background Form Color -->
 
