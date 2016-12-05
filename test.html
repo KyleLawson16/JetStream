@@ -20,7 +20,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-9">
     <div class="options">
-      <label class="labels" for="link">Youtube Link: </label><input class="inputs" type="text" name="link" size="20" id="link" placeholder="link" />
+      <label class="labels" for="link">Video Link: </label><input class="inputs" type="text" name="link" size="20" id="link" placeholder="link" />
       <button class="buttons" type="button" onclick="createYouTubeEmbedLink (link)" >Submit</button>
     </div>
 
@@ -66,7 +66,7 @@ function createYouTubeEmbedLink (link) {
       <input type='text' class='startEmpty' id="showInputWithClear" value='' />
 
 <script>
-var initialColor = "";
+var initialColor = "rgba(0,0,0,0.7)";
 $("#form").css("backgroundColor", initialColor);
 
 function updateColor(element, color) {
@@ -111,8 +111,8 @@ function changeBGC(color){
       <input type='text' class='startEmpty' id="showInputWithClearButton" value='' />
 
 <script>
-var initialColor = "";
-$("#submit").css("backgroundColor", initialColor);
+var initialColor2 = "rgb(0,186,47)";
+$("#submit").css("backgroundColor", initialColor2);
 
 function updateButtonColor(element, color) {
     $(element).css("backgroundColor", 
