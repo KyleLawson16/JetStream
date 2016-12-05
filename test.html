@@ -31,7 +31,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-9">
+    <div class="col-xs-12 col-sm-8">
     <div class="options">
       <label class="labels" for="link">Video Link: </label><input class="inputs" type="text" name="link" size="20" id="link" placeholder="link" />
       <button class="buttons" type="button" onclick="createYouTubeEmbedLink (link)" >Submit</button>
@@ -57,10 +57,9 @@ function createYouTubeEmbedLink (link) {
 <!-- HTML Stacking Form And Video -->
 
     <div class="outer">
-      <div class="inner">
+      <div class="myIframe">
         <iframe id="iframe" src="" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div id="dissapear" class="inner">
+        <div id="dissapear" class="inner">
         <form id="form" method="post" name="installer" onsubmit="showHide(); return false;">
           <div id="icard" class="drag">Please enter your email in order to watch video.</div>
           <input id="email" type="email" name="email" required placeholder="Email Address" />
@@ -68,6 +67,8 @@ function createYouTubeEmbedLink (link) {
           <div id="skipEmail" type="button" onClick="javascript:showHide()">Skip Entering Email</div>
         </form>
       </div>
+      </div>
+      
     </div>
     </div>
     
@@ -87,7 +88,7 @@ function positionForm() {
 
 <!-- Changing Background Form Color -->
 
-    <div class="col-xs-12 col-sm-3">
+    <div class="col-xs-12 col-sm-4">
     <div class="options">
       <label class="labels" for="color">Background Color: </label>
       <input type='text' class='startEmpty' id="showInputWithClear" value='' />
@@ -130,7 +131,7 @@ function changeBGC(color){
   color = document.getElementById('color').value;
   div.style.backgroundColor = color;
 }
-</script>
+</script>-->
 
 <!-- Changing Button Color -->
 

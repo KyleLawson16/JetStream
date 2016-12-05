@@ -1,6 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* WebPage Styling */
+
 body {
   color:#000000;
   background-color:#FFFFFF;
@@ -25,6 +27,42 @@ a:active {
   color:#FF0000;
 }
 	
+.options {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.labels {
+  font-size: 16px;
+  width: 500px;
+}
+
+.inputs {
+  width: 60%;
+  height: 55px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.buttons {
+  width: 200px;
+  height: 55px;
+  border-radius: 5px;
+  border: solid 2px black;
+  font-size: 20px;
+  background-color: transparent;
+  color: black;
+  margin-left: 20px;
+}
+
+.buttons:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Iframe Styling */
+
 .outer {
   text-align: center;
   display: block;
@@ -35,16 +73,32 @@ a:active {
 
 .inner {
   position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: -30px;
 }
 
-#iframe {
-	width: 560px;
-	height: 315px;
+.myIframe {
+position: relative;
+padding-bottom: 50.25%;
+padding-top: 30px;
+height: 0;
+overflow: auto; 
+-webkit-overflow-scrolling:touch; //<<--- THIS IS THE KEY 
+border: solid black 1px;
+}
+
+.myIframe iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
 #form {
-  width: 560px;
-  height: 315px;
+  width: 100%;
+  height: 100%;
   z-index: 2;
   top: 0;
   left: 0;
@@ -84,45 +138,12 @@ a:active {
 #submit:hover {
   background-color: ;
 }
-	
-.options {
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.labels {
-  font-size: 16px;
-  width: 500px;
-}
-
-.inputs {
-  width: 60%;
-  height: 30px;
-  border-radius: 5px;
-  font-size: 15px;
-}
-
-.buttons {
-  width: 30%;
-  height: 35px;
-  border-radius: 5px;
-  border: none;
-  font-size: 15px;
-  background-color: #ff0000;
-  color: #ffffff;
-  margin-left: 20px;
-}
-
-.buttons:hover {
-  background-color: #ff9999;
-}
 
 #icard {
 	text-align: center;
 	font-size: 16px;
 	color: #ffffff;
-	padding-top: 100px;
+	padding-top: 20%;
 }
 
 #skipEmail {
