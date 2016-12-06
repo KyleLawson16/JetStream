@@ -205,12 +205,17 @@ $(".startEmpty").spectrum({
 });
 $("#showInputWithClear").spectrum({
     showInput: true,
+	showPaletteOnly: true,
+    togglePaletteOnly: true,
+	togglePaletteMoreText: 'Advanced',
+    togglePaletteLessText: 'Basic',
     allowEmpty:true,
 	showAlpha: true,
 	showPalette: true,
     palette: [
-        ['black', 'white', 'blanchedalmond'],
-        ['rgb(255, 128, 0);', 'hsv 100 70 50', 'lightyellow']
+        ['red', 'orange', 'yellow', 'green'],
+		['blue', 'purple', 'pink', 'brown'],
+		['black', 'grey', 'white', '#82b1ff']
     ],
 	color: initialColor,
     move: function (color) { updateColor("#form", color); },
@@ -247,12 +252,17 @@ function updateButtonColor(element, color) {
  
 $("#showInputWithClearButton").spectrum({
     showInput: true,
+	showPaletteOnly: true,
+    togglePaletteOnly: true,
+	togglePaletteMoreText: 'Advanced',
+    togglePaletteLessText: 'Basic',
     allowEmpty:true,
 	showPalette: true,
 	showAlpha: true,
     palette: [
-        ['black', 'white', 'blanchedalmond'],
-        ['rgb(255, 128, 0);', 'hsv 100 70 50', 'lightyellow']
+        ['red', 'orange', 'yellow', 'green'],
+		['blue', 'purple', 'pink', 'brown'],
+		['black', 'grey', 'white', 'rgba(0,0,0,0.7)']
     ],
 	color: initialColor2,
     move: function (color) { updateButtonColor("#submit", color); },

@@ -90,6 +90,8 @@ a:active {
 .checkBox {
 	width: 30px;
 	height: 30px;
+	background-color: #ffffff !important;
+	border: solid 2px #000000 !important;
 }
 
 .checkBox:hover {

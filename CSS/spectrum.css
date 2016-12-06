@@ -255,8 +255,8 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 
 .sp-container {
     border-radius: 0;
-    background-color: #ECECEC;
-    border: solid 1px #f0c49B;
+    background-color: #ffffff;
+    border: solid 1px #82b1ff;
     padding: 0;
 }
 .sp-container, .sp-container button, .sp-container input, .sp-color, .sp-hue, .sp-clear {
@@ -293,7 +293,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
    color: #222;
 }
 .sp-input:focus  {
-    border: 1px solid orange;
+    border: 1px solid #82b1ff;
 }
 .sp-input.sp-validation-error {
     border: 1px solid red;
@@ -331,7 +331,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     border:solid 2px transparent;
 }
 .sp-palette .sp-thumb-el:hover, .sp-palette .sp-thumb-el.sp-thumb-active {
-    border-color: orange;
+    border-color: #82b1ff;
 }
 .sp-thumb-el {
     position:relative;
@@ -370,13 +370,13 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     display:inline-block;
     *zoom: 1;
     *display: inline;
-    border: solid 1px #91765d;
-    background: #eee;
+    border: solid 2px #000000;
+    background: #ffffff;
     color: #333;
     vertical-align: middle;
 }
 .sp-replacer:hover, .sp-replacer.sp-active {
-    border-color: #F0C49B;
+    border-color: #82b1ff;
     color: #111;
 }
 .sp-replacer.sp-disabled {
@@ -419,7 +419,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 
 /* Buttons: http://hellohappy.org/css3-buttons/ */
 .sp-container button {
-  background-color: #eeeeee;
+  background-color: #ffffff;
   background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
   background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
   background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
