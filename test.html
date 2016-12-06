@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="CSS/custom.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="JS/spectrum.js"></script>
+    <script src="JS/custom.js"></script>
+    <script src="JQUERY/custom.jquery.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
     <link rel="stylesheet" href="CSS/spectrum.css" />
   </head>
-  <body onLoad="positionForm()">
-  
+  <body onLoad="hovColor()">
 <script>
   // Initialize Firebase
   var config = {
@@ -26,9 +27,7 @@
   };
   firebase.initializeApp(config);
 </script>
-
 <!-- Adding A Youtube Video -->
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-8">
@@ -38,24 +37,6 @@
     </div>
     </div>
   </div>
-
-<script language="javascript" type="text/javascript">
-function createYouTubeEmbedLink (link) {
-  link = document.getElementById('link').value;
-  if (link.charAt(12) == 'y') {
-	  var number = link.substring(32);
-  	  var embed = "https://www.youtube.com/embed/" + number;
-  	  document.getElementById('iframe').src = embed;
-  }
-  else if (link.charAt(12) == 'o') {
-	  var number = link.substring(18);
-	  var embed = "https://player.vimeo.com/video/" + number;
-	  document.getElementById('iframe').src = embed;
-  }
-  else {}
-}
-</script>
-
 <!-- HTML Stacking Form And Video -->
   <div class="row">
     <div class="col-xs-12 col-sm-8">
@@ -66,131 +47,27 @@ function createYouTubeEmbedLink (link) {
         <form id="form" method="post" name="installer" onsubmit="showHide(); return false;">
           <div id="icard" class="drag">Please enter your email in order to watch video.</div>
           <input id="email" class="inputIframe" type="email" name="email" required placeholder="Email Address" />
-          <input id="submit" type="submit" value="Submit" name="submit" onmouseover="changeHC(hovColor)" onmouseout="changeButtonColor(buttonColor)" />
+          <input id="submit" type="submit" value="Submit" name="submit" onmouseover="javascript:hovColor()" onmouseout="changeButtonColor(buttonColor)" />
           <div id="skipEmail" type="button" onClick="javascript:showHide()">Skip Entering Email</div>
         </form>
+        </div>
       </div>
-      </div>
-      
     </div>
     </div>
-    
-<!--<script type="text/javascript">
-function positionForm() {
-    var iframe = document.getElementById("iframe");
-	var icard = document.getElementById("icard");
-	var height = iframe.style.height;
-	//height = height.toString();
-	//var heightNumber = height.substring(0, height.length-2);
-	//var margin = (heightNumber - 50) / 2;
-	//margin += "px";
-	window.alert(height);
-	//icard.style.paddingTop = margin;
-}
-</script>-->
-
-<!--
-
-    <div class="options">
-      <label class="labels" for="buttonColor">Button Color: </label><input class="inputs" type="text" name="buttonColor" size="20" id="buttonColor" placeholder="rgb(red,green,blue)" />
-      <button class="buttons" type="button" onClick="javascript:changeButtonColor(buttonColor)">Submit</button>
-    </div>
-
-<script type="text/javascript">
-function changeButtonColor(buttonColor){
-  var div = document.getElementById("submit");
-  buttonColor = document.getElementById('buttonColor').value;
-  div.style.backgroundColor = buttonColor;
-}
-</script>-->
-
 <!-- Intro Text -->
-
-<div class="col-xs-12 col-sm-4">
-  <div class="options">
-    <label class="firstLabel" for="fname">Intro Text: </label><input id="fname" class="inputStyles" onkeyup="getVal()" type="text" name="filter_name" placeholder="Your Message" onclick="this.value = &#39;&#39;;" onkeydown="this.style.color = &#39;#000000&#39; " >
-
-<script type="text/javascript">
-function getVal() {
-    var x = document.getElementById("fname");
-    document.getElementById("icard").innerHTML = x.value;
-}
-</script>
-
+    <div class="col-xs-12 col-sm-4">
+      <div class="firstOption">
+      <label class="firstLabel" for="fname">Intro Text: </label>
+      <input id="fname" class="inputStyles" onkeyup="getVal()" type="text" name="filter_name" placeholder="Your Message" onclick="this.value = &#39;&#39;;" onkeydown="this.style.color = &#39;#000000&#39; " >
 <!-- Changing Button Text -->
-
-    <label class="labels" for="buttonText">Button Text: </label><input id="buttonText" class="inputStyles" onkeyup="changeButtonText()" type="text" name="filter_name" placeholder="Submit" onclick="this.value = &#39;&#39;;" onkeydown="this.style.color = &#39;#000000&#39; " >
-
-<script type="text/javascript">
-function changeButtonText() {
-    var x = document.getElementById("buttonText");
-    document.getElementById("submit").value = x.value;
-}
-</script>
-
-<!-- Changing Button Font 
-
-    <div class="options">
-      <p>Font:</p>
-      <label class="labels" for="fontSize">Size: </label><input class="inputs" type="text" name="fontSize" size="20" id="fontSize" placeholder="px" />
-      <button class="buttons" type="button" onClick="javascript:changeButtonFont(fontSize)">Submit</button>
-    </div>
-
-<script type="text/javascript">
-function changeButtonFont(fontSize){
-  var div = document.getElementById("submit");
-  fontSize = document.getElementById('fontSize').value;
-  fontSizePX = fontSize.toString();
-  var end = fontSize.length - 1;
-  var beforeEnd = fontSize.length - 2;
-  if (fontSize.toLowerCase(fontSize.charAt(end) == 'x') && fontSize.toLowerCase(fontSize.charAt(beforeEnd) == 'p')) {
-	  div.style.fontSize = fontSize;
-  }
-  if ((fontSize.length=2) || (fontSize.length = 1)) {
-	  fontSize = fontSize.concat("px");
-	  //window.alert(fontSize);	  
-	  div.style.fontSize = fontSize;
-  }
-  else 
-  	{}
-}
-</script>
-
--->
-
-<!-- Changing Button Hover Color 
-
-    <div class="options">
-      <label class="labels" for="hovColor">Button Hover Color: </label><input class="inputs" type="text" name="hovColor" size="20" id="hovColor" placeholder="rgb(red,green,blue)" />
-      <button class="buttons" type="button" >Submit</button>
-    </div>
-
-<script type="text/javascript">
-function changeHC(hovColor){
-  var div = document.getElementById("submit");
-  hovColor = document.getElementById('hovColor').value;
-  div.style.backgroundColor = hovColor;
-}
-</script>
-
--->
-
+      <label class="labels" for="buttonText">Button Text: </label>
+      <input id="buttonText" class="inputStyles" onkeyup="changeButtonText()" type="text" name="filter_name" placeholder="Submit" onclick="this.value = &#39;&#39;;" onkeydown="this.style.color = &#39;#000000&#39; " >
 <!-- Input Text -->
-
-    <label class="labels" for="inputText">Input Text: </label><input id="inputText" class="inputStyles" onkeyup="getVal2()" type="text" name="filter_name" placeholder="Email Address" onclick="this.value = &#39;&#39;;" onkeydown="this.style.color = &#39;#000000&#39; " >
-
-<script type="text/javascript">
-function getVal2() {
-    var x = document.getElementById("inputText");
-    document.getElementById("email").placeholder = x.value;
-}
-</script>
-
+      <label class="labels" for="inputText">Input Text: </label>
+      <input id="inputText" class="inputStyles" onkeyup="getVal2()" type="text" name="filter_name" placeholder="Email Address" onclick="this.value = &#39;&#39;;" onkeydown="this.style.color = &#39;#000000&#39; " >
 <!-- Changing Background Form Color -->
-
       <label class="labels" for="color">Background Color: </label>
       <input type='text' class='startEmpty' id="showInputWithClear" value='' />
-
 <script>
 var initialColor = "rgba(0,0,0,0.7)";
 $("#form").css("backgroundColor", initialColor);
@@ -223,24 +100,9 @@ $("#showInputWithClear").spectrum({
 });
 
 </script>   
-      
-      <!--<input class="inputs" type="text" name="color" size="20" id="color" placeholder="rgba(red,green,blue,opacity)" />
-      <button class="buttons" type="button" onClick="javascript:changeBGC(color)">Submit</button>
-    </div>
-
-<script type="text/javascript">
-function changeBGC(color){
-  var div = document.getElementById("form");
-  color = document.getElementById('color').value;
-  div.style.backgroundColor = color;
-}
-</script>-->
-
 <!-- Changing Button Color -->
-
       <label class="labels" for="color">Button Color: </label>
       <input type='text' class='startEmpty' id="showInputWithClearButton" value='' />
-
 <script>
 var initialColor2 = "#82b1ff";
 $("#submit").css("backgroundColor", initialColor2);
@@ -269,38 +131,10 @@ $("#showInputWithClearButton").spectrum({
     hide: function (color) { updateButtonColor("#submit", color); }
 });
 
-</script> 
-
+</script> 	
 <!-- Hide Skip Form On Click -->
-
-    <label class="labels" for="skipBox">Hide Skip Option: </label><input class="checkBox" type="checkbox" name="skipBox" size="20" id="skipBox" onClick="javascript:showHideSkip()" />
-
-<script type="text/javascript">
-function showHideSkip() {
-  var div = document.getElementById("skipEmail");
-  if (div.style.display == 'none') {
-    div.style.display = '';
-  }
-  else {
-    div.style.display = 'none';
-  }
-}
-</script>
-
-<!-- Hiding Form Upon Submission -->
-
-<script type="text/javascript">
-function showHide() {
-  var div = document.getElementById("dissapear");
-  if (div.style.display == 'none') {
-    div.style.display = '';
-  }
-  else {
-    div.style.display = 'none';
-  }
-}
-</script>
-
+      <label class="labels" for="skipBox">Hide Skip Option: </label><input class="checkBox" type="checkbox" name="skipBox" size="20" id="skipBox" onClick="javascript:showHideSkip()" />
+      </div>
     </div>
   </div>
 </div>

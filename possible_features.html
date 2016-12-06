@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<!-- Changing Button Font 
+
+    <div class="options">
+      <p>Font:</p>
+      <label class="labels" for="fontSize">Size: </label><input class="inputs" type="text" name="fontSize" size="20" id="fontSize" placeholder="px" />
+      <button class="buttons" type="button" onClick="javascript:changeButtonFont(fontSize)">Submit</button>
+    </div>
+
+<script type="text/javascript">
+function changeButtonFont(fontSize){
+  var div = document.getElementById("submit");
+  fontSize = document.getElementById('fontSize').value;
+  fontSizePX = fontSize.toString();
+  var end = fontSize.length - 1;
+  var beforeEnd = fontSize.length - 2;
+  if (fontSize.toLowerCase(fontSize.charAt(end) == 'x') && fontSize.toLowerCase(fontSize.charAt(beforeEnd) == 'p')) {
+	  div.style.fontSize = fontSize;
+  }
+  if ((fontSize.length=2) || (fontSize.length = 1)) {
+	  fontSize = fontSize.concat("px");
+	  //window.alert(fontSize);	  
+	  div.style.fontSize = fontSize;
+  }
+  else 
+  	{}
+}
+</script>
+
+-->
+
+<!-- Changing Button Hover Color 
+
+    <div class="options">
+      <label class="labels" for="hovColor">Button Hover Color: </label><input class="inputs" type="text" name="hovColor" size="20" id="hovColor" placeholder="rgb(red,green,blue)" />
+      <button class="buttons" type="button" >Submit</button>
+    </div>
+
+<script type="text/javascript">
+function changeHC(hovColor){
+  var div = document.getElementById("submit");
+  hovColor = document.getElementById('hovColor').value;
+  div.style.backgroundColor = hovColor;
+}
+</script>
+
+-->
+<!--<script type="text/javascript">
+function positionForm() {
+    var iframe = document.getElementById("iframe");
+	var icard = document.getElementById("icard");
+	var height = iframe.style.height;
+	//height = height.toString();
+	//var heightNumber = height.substring(0, height.length-2);
+	//var margin = (heightNumber - 50) / 2;
+	//margin += "px";
+	window.alert(height);
+	//icard.style.paddingTop = margin;
+}
+</script>-->
+
+<!--
+
+    <div class="options">
+      <label class="labels" for="buttonColor">Button Color: </label><input class="inputs" type="text" name="buttonColor" size="20" id="buttonColor" placeholder="rgb(red,green,blue)" />
+      <button class="buttons" type="button" onClick="javascript:changeButtonColor(buttonColor)">Submit</button>
+    </div>
+
+<script type="text/javascript">
+function changeButtonColor(buttonColor){
+  var div = document.getElementById("submit");
+  buttonColor = document.getElementById('buttonColor').value;
+  div.style.backgroundColor = buttonColor;
+}
+</script>-->
+
+</body>
+</html>
